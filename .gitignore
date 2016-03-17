@@ -1,6 +1,7 @@
 .DS_Store
 .ruby-version
 .rbenv-gemsets
+.path_progress
 *~
 *.swm
 *.swn
