@@ -14,9 +14,14 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  unique_sides = [a, b, c].uniq
+  sides = [a, b, c]
+  min_side = sides.min
+  max_side = sides.max
+  sum = sides.inject(:+)
 
-  case unique_sides.count
+  raise TriangleError if ((min_side <= 0) || ((sum / 2.0) <= max_side))
+
+  case sides.uniq.count
   when 1
     :equilateral
   when 2
